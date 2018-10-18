@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+use Symfony\Component\Console\Application;
+use App\MainUserCommand;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$application = new Application('Project stat v.1');
+
+$application->add(new MainUserCommand());
+
+$exitCode = $application->run();
+
+exit($exitCode);
